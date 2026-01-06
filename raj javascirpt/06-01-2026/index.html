@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function basic 
+        function say_hello(){
+            alert("you are finished!")
+        }
+        // calling function without button
+        say_hello();
+
+        // function with parameters
+        function add_numbers(num1,num2){
+            result = num1 + num2;
+            console.log("the sum is :" + result);
+
+        }
+        add_numbers(50,10);
+        add_numbers(12154,1);
+
+        //   arrow function
+        const info = () => {
+            return "this is arrow function"
+        } 
+        console.log("<br>" + info());
+        document.write("<br>" + info());
+
+        //parameterized arrow function
+        const square = (x) =>{
+            return x*x
+        }
+         document.write("<br> the square of given number  is :" + square(7));
+
+        
+    </script>
+</head>
+<body>
+    <br>
+    <button onclick="say_hello()">click me</button>
+</body>
+</html>
