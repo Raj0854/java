@@ -11,57 +11,58 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script>
-        function full_name(){
-            first_name= document.getElementById("First").value;
-            last_name= document.getElementById("last").value;
-            fullname= first_name.concat(" ",last_name);
-            document.write("The Full name of entered data is: ",fullname,"<hr>");
+        function full_name() {
+            first_name = document.getElementById("First").value;
+            last_name = document.getElementById("last").value;
+            f_name = first_name.concat(" ", last_name);
+            document.getElementById("print_name").innerHTML = f_name;
         }
-        function upper(){
-            first_name= document.getElementById("First").value;
-            last_name= document.getElementById("last").value;
-            fullname= first_name.concat(" ",last_name);
-            document.write("The upper casse of entered data is: ",fullname.toUpperCase(),"<hr>");
+        function upper() {
+            first_name = document.getElementById("First").value;
+            last_name = document.getElementById("last").value;
+            f_name = first_name.concat(" ", last_name);
+            document.getElementById("print_name").innerHTML = f_name.toUpperCase();
+
         }
-        function lower(){
-            first_name= document.getElementById("First").value;
-            last_name= document.getElementById("last").value;
-            fullname= first_name.concat(" ",last_name);
-            document.write("The upper case of entered data is: ",fullname.toLowerCase(),"<hr>");
+        function lower() {
+            first_name = document.getElementById("First").value;
+            last_name = document.getElementById("last").value;
+            f_name = first_name.concat(" ", last_name);
+            document.getElementById("print_name").innerHTML = f_name.toLowerCase();
+
         }
-        
+
     </script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
+    <div class="container mt-5">
+        <div class="row justify-content-center  ">
+            <div class="col-sm-6 border border-primary p-5 rounded-4 shadow-lg">
                 <h1> String practice</h1>
-                <div class="input-group">
-                    <span class="input-group-text ">First name</span>
-                    <input type="text" aria-label="First name" class="form-control" id="First">
+                <label for="form-label">First name</label>
+                <input type="text" aria-label="First name" class="form-control" id="First">
+                <label for="form-label">Last name</label>
+                <input type="text" aria-label="last name" class="form-control" id="last">
+                <div class="row mt-4">
+                    <div class="col">
+                        <button type="button" onclick="full_name()" class="btn  btn-info">Full name </button>
+                        <button type="button" onclick="lower()" class="btn  btn-info">Lower Letter</button>
+                        <button type="button" onclick="upper()" class="btn  btn-info">Upper Letter</button>
+                    </div>
 
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center mt-4">
-                <div class="input-group">
-                    <span class="input-group-text ">Last name</span>
-                    <input type="text" aria-label="last name" class="form-control" id="last">
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-6 border border-success p-5 rounded-4 shadow-lg">
+                <h3 class="text-center">Full Name :</h3>
+                <h1 class="text-center fs-4 alert alert-info" id="print_name"></h1>
 
-                </div>
+
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <button type="button" onclick="full_name()" class="btn  btn-info">Print</button>
-                <button type="button" onclick="lower()" class="btn  btn-info">Lower Letter</button>
-                <button type="button" onclick="upper()" class="btn  btn-info">Upper Letter</button>
-            </div>
-            
-        </div>
+
     </div>
 </body>
 
