@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        function full_name() {
+            f_name = document.getElementById("full_name").value;
+            document.getElementById("print_name").innerHTML = f_name;
+        }
+        function trim() {
+            f_name = document.getElementById("full_name").value;
+            start=document.getElementById("start_number").value;
+            end=document.getElementById("end_number").value;
+            document.getElementById("print_name").innerHTML = f_name.substring(start,end);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center  ">
+            <div class="col-sm-6 border border-primary p-5 rounded-4 shadow-lg">
+                <h1> String practice</h1>
+                <label for="form-label">Enter the name</label>
+                <input type="text" aria-label="full name" class="form-control" id="full_name">
+                <label for="form-label">Start number</label>
+                <input type="text" aria-label="Start number" class="form-control">
+                <label for="form-label">End number</label>
+                <input type="text" aria-label="End number" class="form-control">
+                <div class="row mt-4">
+                    <div class="col">
+                        <button type="button" onclick="full_name()" class="btn  btn-info">Full name </button>
+                        <button type="button" onclick="trim()" class="btn  btn-info">Get Letter</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-6 border border-success p-5 rounded-4 shadow-lg">
+                <h3 class="text-center">Name :</h3>
+                <h1 class="text-center fs-4 alert alert-info" id="print_name"></h1>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
