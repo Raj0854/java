@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        sports=["Football", "Cricket", "Hockey", "Tennis"];
+        // Displaying the entire array
+        document.write(sports  + "<br>" );
+        // Accessing the first element
+        document.write(sports[0] + "<br>" );
+        // Accessing the third element
+        document.write(sports[2] + "<br>" );
+        // Finding the length of the array
+        document.write(sports.length + "<br>" );
+        // Modifying the second element
+        sports[1] = "Baseball";
+        document.write(sports  + "<br>" );
+        // Adding a new element at the end
+        sports.push("cricket"); 
+        sports.push("Swimming");
+        document.write(sports  + "<br>" );
+        // Removing the last element
+        sports.pop();
+        document.write(sports  + "<br>" );
+        // Finding the index of an element
+        document.write(sports.indexOf("Hockey") + "<br>" );
+
+        // Looping through the array
+        for(let i=0; i<sports.length; i++){
+            document.write(sports[i] + "<br>" );
+        }   
+    </script>
+
+    
+</head>
+<body>
+    
+</body>
+</html>
