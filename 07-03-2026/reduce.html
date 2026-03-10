@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        data = [7,48,88,482,81,45,14,55]
-        function sum(x){
-            return x+x
+        data = [7, 48, 88, 482, 81, 45, 14, 55]
+        function sum(x) {
+            return x + x
         }
         console.log(data.reduce(sum))
+        
+        total = 0;
+        for ( i = 0; i < data.length; i++) {
+            total += data[i]
+        }
+
+        console.log(total)
     </script>
+
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
